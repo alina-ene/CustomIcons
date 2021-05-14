@@ -16,6 +16,7 @@
 		ACDE34F0264E97750072AC0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE34EF264E97750072AC0A /* Preview Assets.xcassets */; };
 		ACDE34FB264E97750072AC0A /* CustomIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE34FA264E97750072AC0A /* CustomIconsTests.swift */; };
 		ACDE3506264E97750072AC0A /* CustomIconsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3505264E97750072AC0A /* CustomIconsUITests.swift */; };
+		ACEB1FE3264EB24600BD5818 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEB1FE2264EB24600BD5818 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		ACDE3501264E97750072AC0A /* CustomIconsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomIconsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE3505264E97750072AC0A /* CustomIconsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsUITests.swift; sourceTree = "<group>"; };
 		ACDE3507264E97750072AC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACEB1FE2264EB24600BD5818 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AC205F39264EA064000473BC /* IconRowView.swift */,
 				AC205F46264EA38E000473BC /* Icon.swift */,
 				AC205F4B264EABAD000473BC /* IconsService.swift */,
+				ACEB1FE2264EB24600BD5818 /* data.json */,
 				ACDE34EC264E97750072AC0A /* Assets.xcassets */,
 				ACDE34F1264E97750072AC0A /* Info.plist */,
 				ACDE34EE264E97750072AC0A /* Preview Content */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACDE34F0264E97750072AC0A /* Preview Assets.xcassets in Resources */,
+				ACEB1FE3264EB24600BD5818 /* data.json in Resources */,
 				ACDE34ED264E97750072AC0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

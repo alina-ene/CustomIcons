@@ -27,6 +27,7 @@ struct ContentView: View {
                     IconRowView.placeholderIcons
                 }
             }
+            .padding(20)
             
         }
         .onAppear(perform: iconsService.fetchIcons)

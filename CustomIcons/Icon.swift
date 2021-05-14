@@ -12,3 +12,7 @@ struct Icon: Codable {
     let subtitle: String
     let image: String
 }
+
+struct Icons: Codable {
+    let icons: [Icon]
+}

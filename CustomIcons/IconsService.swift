@@ -12,6 +12,35 @@ final class IconsService: ObservableObject {
     @Published var icons = [Icon]()
     
     func fetchIcons() {
-        icons = [Icon(title: "test", subtitle: "ggggg", image: "mmm"), Icon(title: "teste", subtitle: "ggggg", image: "mmm")]
+        
+        if let localData = self.readLocalFile(forName: "data") {
+            self.parse(jsonData: localData)
+        }
     }
+    
+    private func readLocalFile(forName name: String) -> Data? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                return jsonData
+            }
+        } catch {
+            print(error)
+        }
+        
+        return nil
+    }
+    
+    private func parse(jsonData: Data) {
+        do {
+            let decodedData = try JSONDecoder().decode(Icons.self,
+                                                       from: jsonData)
+            icons = decodedData.icons
+            print("Description: ", decodedData)
+        } catch {
+            print("decode error")
+        }
+    }
+    
 }
