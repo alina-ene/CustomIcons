@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC205F3A264EA064000473BC /* IconRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205F39264EA064000473BC /* IconRowView.swift */; };
 		AC205F47264EA38E000473BC /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205F46264EA38E000473BC /* Icon.swift */; };
+		AC205F4C264EABAD000473BC /* IconsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205F4B264EABAD000473BC /* IconsService.swift */; };
 		ACDE34E9264E97720072AC0A /* CustomIconsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE34E8264E97710072AC0A /* CustomIconsApp.swift */; };
 		ACDE34EB264E97720072AC0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE34EA264E97720072AC0A /* ContentView.swift */; };
 		ACDE34ED264E97750072AC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE34EC264E97750072AC0A /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		AC205F39264EA064000473BC /* IconRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRowView.swift; sourceTree = "<group>"; };
 		AC205F46264EA38E000473BC /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		AC205F4B264EABAD000473BC /* IconsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsService.swift; sourceTree = "<group>"; };
 		ACDE34E5264E97710072AC0A /* CustomIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE34E8264E97710072AC0A /* CustomIconsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsApp.swift; sourceTree = "<group>"; };
 		ACDE34EA264E97720072AC0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				ACDE34EA264E97720072AC0A /* ContentView.swift */,
 				AC205F39264EA064000473BC /* IconRowView.swift */,
 				AC205F46264EA38E000473BC /* Icon.swift */,
+				AC205F4B264EABAD000473BC /* IconsService.swift */,
 				ACDE34EC264E97750072AC0A /* Assets.xcassets */,
 				ACDE34F1264E97750072AC0A /* Info.plist */,
 				ACDE34EE264E97750072AC0A /* Preview Content */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACDE34EB264E97720072AC0A /* ContentView.swift in Sources */,
+				AC205F4C264EABAD000473BC /* IconsService.swift in Sources */,
 				ACDE34E9264E97720072AC0A /* CustomIconsApp.swift in Sources */,
 				AC205F47264EA38E000473BC /* Icon.swift in Sources */,
 				AC205F3A264EA064000473BC /* IconRowView.swift in Sources */,

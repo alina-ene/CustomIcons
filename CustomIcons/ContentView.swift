@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var icons: [Icon] = [Icon(title: "test", subtitle: "ggggg", image: "mmm"), Icon(title: "teste", subtitle: "ggggg", image: "mmm")]
+    @EnvironmentObject var iconsService: IconsService
+    
+    private var icons: [Icon] {
+        iconsService.icons
+    }
     
     var body: some View {
         
@@ -25,11 +29,12 @@ struct ContentView: View {
             }
             
         }
+        .onAppear(perform: iconsService.fetchIcons)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(IconsService())
     }
 }
