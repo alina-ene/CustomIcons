@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVStack(spacing: 8) {
+            LazyVStack(spacing: 15) {
                 if !icons.isEmpty {
                     ForEach(icons, id: \.title) { icon in
                         IconRowView(title: icon.title, subtitle: icon.subtitle, image: icon.image)
