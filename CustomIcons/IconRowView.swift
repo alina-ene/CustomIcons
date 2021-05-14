@@ -23,13 +23,15 @@ struct IconRowView: View {
                 VStack(alignment: .leading) {
                     
                     Text(title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
                         .lineLimit(2)
                         .accessibility(identifier: title)
                     Text(subtitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.secondary)
                         .lineLimit(1)
                         .accessibility(identifier: subtitle)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
                 }
                 .multilineTextAlignment(.leading)
                 Spacer(minLength: 0)
