@@ -11,10 +11,12 @@ struct IconRowView: View {
     let title: String
     let subtitle: String
     let imageURL: URL?
-
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack(alignment: .center) {
+            itemImage
             VStack(alignment: .leading) {
+                
                 Text(title)
                     .lineLimit(2)
                 Text(subtitle)
@@ -27,11 +29,18 @@ struct IconRowView: View {
         }
     }
     
+    @ViewBuilder
+    var itemImage: some View {
+        Color.secondary
+            .frame(width: 50, height: 50)
+            .cornerRadius(8)
+    }
+    
     static let placeholderIcons: some View = {
         ForEach(0 ..< 5) { item in
-            IconRowView(title: "video.name",
-                            subtitle: "video.artistName",
-                            imageURL: nil)
+            IconRowView(title: "Title",
+                        subtitle: "subtitle",
+                        imageURL: nil)
                 .redacted(reason: .placeholder)
         }
     }()
@@ -39,6 +48,6 @@ struct IconRowView: View {
 
 struct IconRowView_Previews: PreviewProvider {
     static var previews: some View {
-        IconRowView(title: "Title", subtitle: "Subtitle", imageURL: URL(string: "")!)
+        IconRowView(title: "Title", subtitle: "Subtitle", imageURL: nil)
     }
 }

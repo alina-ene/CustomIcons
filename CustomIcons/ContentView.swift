@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var icons: [Icon] = []//[Icon(title: "test", subtitle: "ggggg", image: "mmm"), Icon(title: "teste", subtitle: "ggggg", image: "mmm")]
+    private var icons: [Icon] = [Icon(title: "test", subtitle: "ggggg", image: "mmm"), Icon(title: "teste", subtitle: "ggggg", image: "mmm")]
     
     var body: some View {
         
