@@ -17,6 +17,8 @@
 		ACDE34FB264E97750072AC0A /* CustomIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE34FA264E97750072AC0A /* CustomIconsTests.swift */; };
 		ACDE3506264E97750072AC0A /* CustomIconsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE3505264E97750072AC0A /* CustomIconsUITests.swift */; };
 		ACEB1FE3264EB24600BD5818 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEB1FE2264EB24600BD5818 /* data.json */; };
+		ACEB1FE8264EC34400BD5818 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB1FE7264EC34400BD5818 /* NetworkService.swift */; };
+		ACEB1FED264ECD3100BD5818 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACEB1FEC264ECD3100BD5818 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		ACDE3505264E97750072AC0A /* CustomIconsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconsUITests.swift; sourceTree = "<group>"; };
 		ACDE3507264E97750072AC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACEB1FE2264EB24600BD5818 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		ACEB1FE7264EC34400BD5818 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ACEB1FEC264ECD3100BD5818 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,11 @@
 				AC205F39264EA064000473BC /* IconRowView.swift */,
 				AC205F46264EA38E000473BC /* Icon.swift */,
 				AC205F4B264EABAD000473BC /* IconsService.swift */,
+				ACEB1FE7264EC34400BD5818 /* NetworkService.swift */,
 				ACEB1FE2264EB24600BD5818 /* data.json */,
 				ACDE34EC264E97750072AC0A /* Assets.xcassets */,
 				ACDE34F1264E97750072AC0A /* Info.plist */,
+				ACEB1FEC264ECD3100BD5818 /* Launch Screen.storyboard */,
 				ACDE34EE264E97750072AC0A /* Preview Content */,
 			);
 			path = CustomIcons;
@@ -247,6 +253,7 @@
 			files = (
 				ACDE34F0264E97750072AC0A /* Preview Assets.xcassets in Resources */,
 				ACEB1FE3264EB24600BD5818 /* data.json in Resources */,
+				ACEB1FED264ECD3100BD5818 /* Launch Screen.storyboard in Resources */,
 				ACDE34ED264E97750072AC0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +283,7 @@
 				AC205F4C264EABAD000473BC /* IconsService.swift in Sources */,
 				ACDE34E9264E97720072AC0A /* CustomIconsApp.swift in Sources */,
 				AC205F47264EA38E000473BC /* Icon.swift in Sources */,
+				ACEB1FE8264EC34400BD5818 /* NetworkService.swift in Sources */,
 				AC205F3A264EA064000473BC /* IconRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

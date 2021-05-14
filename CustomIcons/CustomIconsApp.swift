@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct CustomIconsApp: App {
-    
     @StateObject private var iconsService: IconsService
     
     init() {
-        _iconsService = StateObject(wrappedValue: IconsService())
+        let network = NetworkService()
+        _iconsService = StateObject(wrappedValue: IconsService(networkService: network))
     }
     
     var body: some Scene {
