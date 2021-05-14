@@ -13,6 +13,10 @@ final class IconsService: ObservableObject {
     
     func fetchIcons() {
         
+        fetchLocalIcons()
+    }
+    
+    func fetchLocalIcons() {
         if let localData = self.readLocalFile(forName: "data") {
             self.parse(jsonData: localData)
         }

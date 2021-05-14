@@ -18,9 +18,15 @@ class CustomIconsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLocalJson() throws {
+        let iconsService = IconsService()
+        iconsService.fetchLocalIcons()
+        assert(!iconsService.icons.isEmpty, "icons list should not be empty")
+        assert(iconsService.icons.count == 16, "icons list should hold 16 elements")
+        
+        assert(iconsService.icons[0].title == "Lime Green")
+        assert(iconsService.icons[0].subtitle == "#A5EA9B")
+        assert(iconsService.icons[0].image == "https://irapps.github.io/wzpsolutions/tests/ios-custom-icons/LimeGreen.png")
     }
 
     func testPerformanceExample() throws {
