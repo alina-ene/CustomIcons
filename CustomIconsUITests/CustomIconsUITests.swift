@@ -10,12 +10,12 @@ import XCTest
 class CustomIconsUITests: XCTestCase {
 
     func testLoadedData() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-        XCTAssertTrue(app.staticTexts["Lime Green"].exists)
-        XCTAssertTrue(app.staticTexts["#A5EA9B"].exists)
-        XCTAssertTrue(app.images["https://irapps.github.io/wzpsolutions/tests/ios-custom-icons/LimeGreen.png"].exists)
+        
+        XCTAssertTrue(app.buttons["Lime Green"].exists)
+        XCTAssertTrue(app.buttons["Peaceful Green"].exists)
+        XCTAssertTrue(app.buttons["Royal Purple"].exists)
     }
 
 }

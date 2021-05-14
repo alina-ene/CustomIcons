@@ -20,5 +20,15 @@ class CustomIconsTests: XCTestCase {
         assert(iconsService.icons[0].subtitle == "#A5EA9B")
         assert(iconsService.icons[0].image == "https://irapps.github.io/wzpsolutions/tests/ios-custom-icons/LimeGreen.png")
     }
+    
+    func testIconsFetch() {
+        let iconsService = IconsService(networkService: NetworkService())
+        let expectation = XCTestExpectation(description: "Fetch remote icons")
+        iconsService.fetchRemoteIcons { (icons: Icons?) in
+            XCTAssertNotNil(icons, "No icons were downloaded.")
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 
 }
