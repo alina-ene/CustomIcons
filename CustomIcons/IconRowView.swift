@@ -15,6 +15,7 @@ struct IconRowView: View {
     var body: some View {
         HStack(alignment: .center) {
             itemImage
+                .accessibility(identifier: image)
             VStack(alignment: .leading) {
                 
                 Text(title)
@@ -33,14 +34,21 @@ struct IconRowView: View {
     
     @ViewBuilder
     var itemImage: some View {
+        if let url = URL(string: image), let data = try? Data(contentsOf: url), let imageObj = UIImage(data: data) {
+            Image(uiImage: imageObj)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 50, height: 50)
+                .cornerRadius(8)
+        } else {
         Color.secondary
             .frame(width: 50, height: 50)
             .cornerRadius(8)
-            .accessibility(identifier: image)
+        }
     }
     
     static let placeholderIcons: some View = {
-        ForEach(0 ..< 5) { item in
+        ForEach(0 ..< 15) { item in
             IconRowView(title: "Title",
                         subtitle: "subtitle",
                         image: "image")
