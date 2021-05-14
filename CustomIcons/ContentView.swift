@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var icons: [Icon] = []//[Icon(title: "test", subtitle: "ggggg", image: "mmm"), Icon(title: "teste", subtitle: "ggggg", image: "mmm")]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack(spacing: 8) {
+                if !icons.isEmpty {
+                    ForEach(icons, id: \.title) { icon in
+                        IconRowView(title: icon.title, subtitle: icon.subtitle, imageURL: nil)
+                    }
+                } else {
+                    IconRowView.placeholderIcons
+                }
+            }
+            
+        }
     }
 }
 
