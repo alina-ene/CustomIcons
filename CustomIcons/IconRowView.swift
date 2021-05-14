@@ -13,23 +13,30 @@ struct IconRowView: View {
     let image: String
     
     var body: some View {
-        HStack(alignment: .center) {
-            itemImage
-                .accessibility(identifier: image)
-            VStack(alignment: .leading) {
-                
-                Text(title)
-                    .lineLimit(2)
-                    .accessibility(identifier: title)
-                Text(subtitle)
-                    .lineLimit(1)
-                    .accessibility(identifier: subtitle)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+        Button(action: {
+            //            onLoginTapped?(username, password)
+        }) {
+            HStack(alignment: .center) {
+                itemImage
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                    .accessibility(identifier: image)
+                VStack(alignment: .leading) {
+                    
+                    Text(title)
+                        .lineLimit(2)
+                        .accessibility(identifier: title)
+                    Text(subtitle)
+                        .lineLimit(1)
+                        .accessibility(identifier: subtitle)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                .multilineTextAlignment(.leading)
+                Spacer(minLength: 0)
             }
-            .multilineTextAlignment(.leading)
-            Spacer(minLength: 0)
-        }
+        }.background(Color(.white))
+        .cornerRadius(8.0)
+        .shadow(color: Color.gray.opacity(0.3), radius: 8.0, x: 0, y: 0)
     }
     
     @ViewBuilder
@@ -41,9 +48,9 @@ struct IconRowView: View {
                 .frame(width: 50, height: 50)
                 .cornerRadius(8)
         } else {
-        Color.secondary
-            .frame(width: 50, height: 50)
-            .cornerRadius(8)
+            Color.secondary
+                .frame(width: 50, height: 50)
+                .cornerRadius(8)
         }
     }
     
