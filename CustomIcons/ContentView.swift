@@ -21,7 +21,7 @@ struct ContentView: View {
             LazyVStack(spacing: 8) {
                 if !icons.isEmpty {
                     ForEach(icons, id: \.title) { icon in
-                        IconRowView(title: icon.title, subtitle: icon.subtitle, imageURL: nil)
+                        IconRowView(title: icon.title, subtitle: icon.subtitle, image: icon.image)
                     }
                 } else {
                     IconRowView.placeholderIcons
